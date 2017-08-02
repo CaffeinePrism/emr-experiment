@@ -1,0 +1,3 @@
+AWS EMR Streaming application experiment
+
+hadoop-streaming -D mapreduce.map.memory.mb=6144 -D mapred.map.child.java.opts=-Xmx4916m -D mapred.reuse.jvm.num.tasks=1 -D mapred.tasktracker.map.tasks.maximum=3 -files s3://test/mapper.py -mapper mapper.py -reducer NONE -input s3://test/files2.txt -output
